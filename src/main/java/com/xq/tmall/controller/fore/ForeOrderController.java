@@ -7,6 +7,7 @@ import com.xq.tmall.entity.*;
 import com.xq.tmall.service.*;
 import com.xq.tmall.util.OrderUtil;
 import com.xq.tmall.util.PageUtil;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +26,7 @@ import java.util.*;
  * 订单列表页
  * @author 贤趣项目小组
  */
+@Tag(name = "Order", description = "The order API")
 @Controller
 public class ForeOrderController extends BaseController {
     @Resource(name = "productService")
@@ -250,7 +252,7 @@ public class ForeOrderController extends BaseController {
             return "redirect:/cart";
         }
         for (ProductOrderItem orderItem : orderItemList) {
-            if (orderItem.getProductOrderItem_user().getUser_id() != userId) {
+            if (!orderItem.getProductOrderItem_user().getUser_id().equals(userId)) {
                 logger.warn("用户订单项与用户不匹配，回到购物车页");
                 return "redirect:/cart";
             }
@@ -1105,7 +1107,7 @@ public class ForeOrderController extends BaseController {
             if (orderItem.getProductOrderItem_product().getProduct_id().equals(product_id)) {
                 logger.info("找到已有的产品，进行数量追加");
                 int number = orderItem.getProductOrderItem_number();
-                number += 1;
+                number += product_number;
                 productOrderItem.setProductOrderItem_id(orderItem.getProductOrderItem_id());
                 productOrderItem.setProductOrderItem_number((short) number);
                 productOrderItem.setProductOrderItem_price(number * product.getProduct_sale_price());

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.xq.tmall.controller.BaseController;
 import com.xq.tmall.entity.Address;
 import com.xq.tmall.service.AddressService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -13,6 +14,7 @@ import java.util.List;
  * 地址信息管理
  * @author 贤趣项目小组
  */
+@Tag(name = "Address", description = "The address API")
 @RestController
 public class ForeAddressController extends BaseController {
     @Resource(name = "addressService")

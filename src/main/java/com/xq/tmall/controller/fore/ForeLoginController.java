@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.xq.tmall.controller.BaseController;
 import com.xq.tmall.entity.User;
 import com.xq.tmall.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,6 +19,7 @@ import java.util.Map;
  * 登陆页
  * @author 贤趣项目小组
  */
+@Tag(name = "Login", description = "The login API")
 @Controller
 public class ForeLoginController extends BaseController {
     @Resource(name = "userService")

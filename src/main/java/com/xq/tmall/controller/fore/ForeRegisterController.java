@@ -6,6 +6,7 @@ import com.xq.tmall.entity.Address;
 import com.xq.tmall.entity.User;
 import com.xq.tmall.service.AddressService;
 import com.xq.tmall.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +23,7 @@ import java.util.Map;
  * 注册页
  * @author 贤趣项目小组
  */
+@Tag(name = "Register", description = "The register API")
 @Controller
 public class ForeRegisterController extends BaseController{
     @Resource(name = "addressService")

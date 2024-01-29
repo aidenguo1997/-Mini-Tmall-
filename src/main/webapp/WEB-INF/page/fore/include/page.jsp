@@ -8,11 +8,11 @@
 <div id="pageDiv">
     <ul>
         <li data-name="firstPage" <c:if test="${!requestScope.pageUtil.isHasPrev()}">class="disabled" </c:if>>
-            <a href="javascript:void(0)" onclick="getPage(0)" aria-label="首页"><span
+            <a href="javascript:void(0)" onclick="getPage(0)" aria-label="First Page"><span
                     aria-hidden="true">&laquo;</span></a>
         </li>
         <li data-name="prevPage" <c:if test="${!requestScope.pageUtil.isHasPrev()}">class="disabled" </c:if>>
-            <a href="javascript:void(0)" onclick="getPage(${requestScope.pageUtil.index-1})" aria-label="上一页"><span
+            <a href="javascript:void(0)" onclick="getPage(${requestScope.pageUtil.index-1})" aria-label="Prev Page"><span
                     aria-hidden="true">&lsaquo;</span></a>
         </li>
 
@@ -25,11 +25,11 @@
         </c:forEach>
 
         <li data-name="nextPage" <c:if test="${!requestScope.pageUtil.isHasNext()}">class="disabled" </c:if>>
-            <a href="javascript:void(0)" onclick="getPage(${requestScope.pageUtil.index+1})" aria-label="下一页"><span
+            <a href="javascript:void(0)" onclick="getPage(${requestScope.pageUtil.index+1})" aria-label="Next Page"><span
                     aria-hidden="true">&rsaquo;</span></a>
         </li>
         <li data-name="lastPage" <c:if test="${!requestScope.pageUtil.isHasNext()}">class="disabled" </c:if>>
-            <a href="javascript:void(0)" onclick="getPage(${requestScope.pageUtil.getTotalPage()-1})" aria-label="尾页">&raquo;</a>
+            <a href="javascript:void(0)" onclick="getPage(${requestScope.pageUtil.getTotalPage()-1})" aria-label="Last Page">&raquo;</a>
         </li>
     </ul>
 </div>

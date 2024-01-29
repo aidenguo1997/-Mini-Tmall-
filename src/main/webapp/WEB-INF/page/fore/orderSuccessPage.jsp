@@ -2,7 +2,7 @@
 <%@ include file="include/header.jsp" %>
 <head>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_orderSuccessPage.css" rel="stylesheet"/>
-    <title>交易成功 - Tmall.com天猫-理想生活上天猫</title>
+    <title>Transaction Successful - Tmall.com - Ideal Life on Tmall</title>
 </head>
 <body>
 <nav>
@@ -16,9 +16,9 @@
     <div class="shopSearchHeader">
         <form action="${pageContext.request.contextPath}/product" method="get">
             <div class="shopSearchInput">
-                <input type="text" class="searchInput" name="product_name" placeholder="搜索 天猫 商品/品牌/店铺"
+                <input type="text" class="searchInput" name="product_name" placeholder="Search Tmall Products/Brands/Shops"
                        maxlength="50">
-                <input type="submit" value="搜 索" class="searchBtn">
+                <input type="submit" value="Search" class="searchBtn">
             </div>
         </form>
     </div>
@@ -26,25 +26,25 @@
 <div class="content">
     <div class="take-delivery">
         <div class="summary-status">
-            <h2>交易已经成功，卖家将收到您的货款。</h2>
+            <h2>Transaction has been successful. The seller will receive your payment.</h2>
             <c:if test="${requestScope.product != null}">
                 <div class="successInfo">
                     <ul class="info-rate-coin">
                         <li>
-                            <span class="review_msg">认真填写商品评价，就有机会获得20点天猫达人经验值！</span>
+                            <span class="review_msg">Fill in the product review seriously, and you may get 20 Tmall Guru Experience Points!</span>
                             <a class="J_makePoint"
                                href="${pageContext.request.contextPath}/review/${requestScope.orderItem.productOrderItem_id}">
                                 <img src="${pageContext.request.contextPath}/res/images/item/productSinglePicture/${requestScope.product.singleProductImageList[0].productImage_src}"
                                      width="100px" height="100px"/>
                                 <p class="product_name"
                                    title="${requestScope.product.product_name}">${requestScope.product.product_name}</p>
-                                <span class="vi-btn">立即评价</span>
+                                <span class="vi-btn">Write Review Now</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </c:if>
-            <p>您可以查看：<a href="${pageContext.request.contextPath}/order/0/10">已买到的宝贝</a></p>
+            <p>You can check: <a href="${pageContext.request.contextPath}/order/0/10">Items You've Purchased</a></p>
         </div>
     </div>
 </div>

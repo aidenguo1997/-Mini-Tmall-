@@ -4,7 +4,7 @@
     <script src="${pageContext.request.contextPath}/res/js/jquery-color-2.1.2.js"></script>
     <script src="${pageContext.request.contextPath}/res/js/fore/fore_home.js"></script>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_home.css" rel="stylesheet"/>
-    <title>天猫tmall.com--理想生活上天猫</title>
+    <title>Tmall tmall.com - Ideal Life on Tmall</title>
 </head>
 <body>
 <nav>
@@ -14,9 +14,9 @@
         <div class="mallSearch">
             <form action="${pageContext.request.contextPath}/product" method="get">
                 <div class="mallSearch-input">
-                    <input class="header_search_input" type="text" name="product_name" placeholder="搜索 天猫 商品/品牌/店铺"
+                    <input class="header_search_input" type="text" name="product_name" placeholder="Search Tmall Products/Brands/Shops"
                            maxlength="50">
-                    <input class="header_search_button" type="submit" value="搜索">
+                    <input class="header_search_button" type="submit" value="Search">
                 </div>
             </form>
             <ul>
@@ -34,20 +34,19 @@
     <div class="home_nav">
         <div class="home_nav_title">
             <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/header_nav_title.png">
-            <span>商品分类</span>
+            <span>Product Category</span>
         </div>
         <a href="https://chaoshi.tmall.com/" target="_blank"><img
                 src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/TB1ztBlaMMPMeJjy1XbXXcwxVXa-200-60.png"></a>
         <a href="https://www.tmall.hk/" target="_blank"><img
                 src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/TB1t5ObaBxRMKJjy0FdXXaifFXa-200-60.png"></a>
-        <a href="http://vip.tmall.com/" target="_blank">天猫会员</a>
-        <a href="https://3c.tmall.com/" target="_blank">电器城</a>
-        <a href="https://miao.tmall.com/" target="_blank">喵鲜生</a>
-        <a href="http://yao.tmall.com/" target="_blank">医药馆</a>
-        <a href="http://wt.tmall.com/" target="_blank">营业厅</a>
-        <a href="https://meilihui.tmall.com/" target="_blank">魅力惠</a>
-        <a href="https://www.alitrip.com/" target="_blank">飞猪旅行</a>
-        <a href="https://suning.tmall.com/" target="_blank">苏宁易购</a>
+        <a href="http://vip.tmall.com/" target="_blank">Tmall VIP</a>
+        <a href="https://3c.tmall.com/" target="_blank">3C</a>
+        <a href="https://miao.tmall.com/" target="_blank">Miao</a>
+        <a href="http://yao.tmall.com/" target="_blank">Pharmacy</a>
+        <a href="https://meilihui.tmall.com/" target="_blank">Meilihui</a>
+        <a href="https://www.alitrip.com/" target="_blank">Fliggy Travel</a>
+        <a href="https://suning.tmall.com/" target="_blank">Suning Easy Buy</a>
     </div>
 </nav>
 <div class="banner">

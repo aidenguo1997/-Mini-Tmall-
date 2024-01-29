@@ -2,7 +2,7 @@
 <%@ include file="include/header.jsp" %>
 <head>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_orderConfirmPage.css" rel="stylesheet"/>
-    <title>确认收货 - Tmall.com天猫-理想生活上天猫</title>
+    <title>Order Confirmation - Tmall.com - Ideal Life on Tmall</title>
     <script>
 
     </script>
@@ -19,9 +19,9 @@
     <div class="shopSearchHeader">
         <form action="${pageContext.request.contextPath}/product" method="get">
             <div class="shopSearchInput">
-                <input type="text" class="searchInput" name="product_name" placeholder="搜索 天猫 商品/品牌/店铺"
+                <input type="text" class="searchInput" name="product_name" placeholder="Search Tmall Products/Brands/Shops"
                        maxlength="50">
-                <input type="submit" value="搜 索" class="searchBtn">
+                <input type="submit" value="Search" class="searchBtn">
             </div>
         </form>
     </div>
@@ -30,48 +30,48 @@
     <div class="headerContext">
         <ol class="header-extra">
             <li class="step-done">
-                <div class="step-name">拍下商品</div>
+                <div class="step-name">Place Order</div>
                 <div class="step-no_first"></div>
                 <div class="step-time">
                     <div class="step-time-wraper">${productOrder.productOrder_pay_date}</div>
                 </div>
             </li>
             <li class="step-done">
-                <div class="step-name">付款到支付宝</div>
+                <div class="step-name">Payment to Alipay</div>
                 <div class="step-no step-no-select"></div>
                 <div class="step-time">
                     <div class="step-time-wraper">${productOrder.productOrder_pay_date}</div>
                 </div>
             </li>
             <li class="step-done">
-                <div class="step-name">卖家发货</div>
+                <div class="step-name">Seller Ships</div>
                 <div class="step-no step-no-select"></div>
                 <div class="step-time">
                     <div class="step-time-wraper">${productOrder.productOrder_delivery_date}</div>
                 </div>
             </li>
             <li class="step-no">
-                <div class="step-name">确认收货</div>
+                <div class="step-name">Confirm Receipt</div>
                 <div class="step-no">4</div>
             </li>
             <li class="step-no">
-                <div class="step-name">评价</div>
+                <div class="step-name">Review</div>
                 <div class="step-no_last">5</div>
             </li>
         </ol>
     </div>
 </div>
 <div class="content">
-    <h1>我已收到货，同意支付宝付款</h1>
+    <h1>I have received the goods and agree to pay with Alipay</h1>
     <div class="order_info">
-        <h2>确认订单信息</h2>
+        <h2>Confirm Order Information</h2>
         <table class="table_order_orderItem">
             <thead>
             <tr>
-                <th>店铺宝贝</th>
-                <th>单价</th>
-                <th>数量</th>
-                <th>小计</th>
+                <th>Shop Items</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
             </tr>
             </thead>
             <tbody>
@@ -93,7 +93,7 @@
             </c:forEach>
             <tr class="order-ft">
                 <td colspan="4">
-                    <div class="total-price">实付款：￥<strong>${requestScope.orderTotalPrice}0</strong></div>
+                    <div class="total-price">Total Paid: ¥<strong>${requestScope.orderTotalPrice}0</strong></div>
                 </td>
             </tr>
             </tbody>
@@ -103,19 +103,19 @@
             </tr>
             <tr>
                 <td colspan="4">
-                    <span class="info_label">订单编号：</span>
+                    <span class="info_label">Order Number:</span>
                     <span class="info_value">${requestScope.productOrder.productOrder_code}</span>
                 </td>
             </tr>
             <tr>
                 <td colspan="4">
-                    <span class="info_label">卖家商铺昵称：</span>
+                    <span class="info_label">Seller Shop Nickname:</span>
                     <span class="info_value">贤趣模拟旗舰店</span>
                 </td>
             </tr>
             <tr>
                 <td colspan="4">
-                    <span class="info_label">成交时间：</span>
+                    <span class="info_label">Transaction Time:</span>
                     <span class="info_value">${requestScope.productOrder.productOrder_pay_date}</span>
                 </td>
             </tr>
@@ -125,12 +125,12 @@
             <div class="bd">
                 <ul>
 <%--                    <li>请收到货后，再确认收货！否则您可能钱货两空！</li>--%>
-                    <li>提示：本系统不会进行真实交易，请放心测试</li>
+                    <li>Note: This system does not conduct real transactions. Please feel free to test.</li>
                 </ul>
                 <script>
                     function confirmOrder() {
                         <%--var yn = confirm("点击确认后，您之前付款到支付宝的 ${requestScope.orderTotalPrice}0 元将直接到卖家账户里，请务必收到货再确认！");--%>
-                        var yn = confirm("点击确认后，您的订单流程即完成，您后续可以进行商品评价和提醒发货。");
+                        var yn = confirm("After clicking confirm, your order process is complete. You can proceed with product reviews and delivery reminders later.");
                         if (yn) {
                             $.ajax({
                                 url: "/tmall/order/success/${requestScope.productOrder.productOrder_code}",
@@ -141,19 +141,19 @@
                                     if (data.success) {
                                         location.href = "/tmall/order/success/${requestScope.productOrder.productOrder_code}";
                                     } else {
-                                        alert("订单确认异常，请稍后再试！");
+                                        alert("Order confirmation exception. Please try again later!");
                                         location.href = "/tmall/order/0/10";
                                     }
                                 },
                                 error: function (data) {
-                                    alert("订单确认异常，请稍后再试！");
+                                    alert("Order confirmation exception. Please try again later!");
                                     location.href = "/tmall/order/0/10";
                                 }
                             });
                         }
                     }
                 </script>
-                <a href="javascript:void(0)" onclick="confirmOrder()">确定</a>
+                <a href="javascript:void(0)" onclick="confirmOrder()">Confirm</a>
             </div>
         </div>
     </div>

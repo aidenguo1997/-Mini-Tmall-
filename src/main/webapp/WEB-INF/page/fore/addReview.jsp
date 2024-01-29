@@ -2,7 +2,7 @@
 <%@ include file="include/header.jsp" %>
 <head>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_addReview.css" rel="stylesheet"/>
-    <title>添加评论 - Tmall.com天猫-理想生活上天猫</title>
+    <title>Add Review - Tmall.com - Ideal Life on Tmall</title>
     <script>
         $(function () {
             $("#review_form").submit(function () {
@@ -30,9 +30,9 @@
     <div class="shopSearchHeader">
         <form action="${pageContext.request.contextPath}/product" method="get">
             <div class="shopSearchInput">
-                <input type="text" class="searchInput" name="product_name" placeholder="搜索 天猫 商品/品牌/店铺"
+                <input type="text" class="searchInput" name="product_name" placeholder="Search Tmall Products/Brands/Shops"
                        maxlength="50">
-                <input type="submit" value="搜 索" class="searchBtn">
+                <input type="submit" value="Search" class="searchBtn">
             </div>
         </form>
     </div>
@@ -48,15 +48,15 @@
             <ol class="ui-form-bd">
                 <li class="ui-form-row"><h3>${orderItem.productOrderItem_product.product_name}</h3></li>
                 <li class="ui-form-row superstar-price">
-                    <label class="ui-form-label">价格</label>
+                    <label class="ui-form-label">Price</label>
                     <div class="ui-form_right">
                         <em>${orderItem.productOrderItem_product.product_sale_price}</em>
                         <span>元</span>
                     </div>
                 </li>
                 <li class="ui-from-row">
-                    <label class="ui-form-label">配送</label>
-                    <div class="ui-form_right"><span class="ul_right_special">快递：0.00</span></div>
+                    <label class="ui-form-label">Shipping</label>
+                    <div class="ui-form_right"><span class="ul_right_special">Express: 0.00</span></div>
                 </li>
             </ol>
         </div>
@@ -64,7 +64,7 @@
             <div class="tv-leftbox">
                 <div class="tv-lb-head"></div>
                 <div class="tv-lb-content">
-                    <span>累计评价</span>
+                    <span>Total Reviews</span>
                     <em class="superstar-ratetotal">${orderItem.productOrderItem_product.product_review_count}</em>
                 </div>
                 <div class="tv-lb-bottom"></div>
@@ -79,17 +79,17 @@
                 <input type="hidden" class="orderItem_id" value="${orderItem.productOrderItem_id}" name="orderItem_id">
                 <div class="compose-main">
                     <div class="compose-header">
-                        <span>其他买家，需要你的建议哦！</span>
+                        <span>Other buyers are looking for your advice!</span>
                     </div>
                     <div class="compose-order">
-                        <div class="J_rateInputArea">评价商品</div>
+                        <div class="J_rateInputArea">Review the product</div>
                         <div class="text-input-box">
                             <textarea id="text-review" name="review_content"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="compose-submit">
-                    <input type="submit" value="提交评价"/>
+                    <input type="submit" value="Submit Review"/>
                 </div>
             </form>
         </div>

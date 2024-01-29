@@ -16,12 +16,12 @@ $(function () {
         if ($(".pwdLogin").css("display") === "block") {
             $(".pwdLogin").css("display", "none");
             $(".qrcodeLogin").css("display", "block");
-            messageSpan.text("密码登录在这里");
+            messageSpan.text("Password login");
             $(this).removeClass("loginSwitch").addClass("loginSwitch_two");
         } else {
             $(".pwdLogin").css("display", "block");
             $(".qrcodeLogin").css("display", "none");
-            messageSpan.text("扫码登录更安全");
+            messageSpan.text("Scan code login");
             $(this).removeClass("loginSwitch_two").addClass("loginSwitch");
         }
     });
@@ -29,7 +29,7 @@ $(function () {
         var messageSpan = $(".loginMessageMain").children("span");
         $(".pwdLogin").css("display", "block");
         $(".qrcodeLogin").css("display", "none");
-        messageSpan.text("扫码登录更安全");
+        messageSpan.text("Scan code login");
         $("#loginSwitch").removeClass("loginSwitch_two").addClass("loginSwitch");
     });
     //登录验证
@@ -37,7 +37,7 @@ $(function () {
         var yn = true;
         $(this).find(":text,:password").each(function () {
             if ($.trim($(this).val()) === "") {
-                styleUtil.errorShow($("#error_message_p"), "请输入用户名和密码！");
+                styleUtil.errorShow($("#error_message_p"), "Please enter username and password!");
                 yn = false;
                 return yn;
             }
@@ -49,19 +49,19 @@ $(function () {
                 data: {"username": $.trim($("#name").val()), "password": $.trim($("#password").val())},
                 dataType: "json",
                 success: function (data) {
-                    $(".loginButton").val("登 录");
+                    $(".loginButton").val("Login");
                     if (data.success) {
                         location.href = "/tmall";
                     } else {
-                        styleUtil.errorShow($("#error_message_p"), "用户名和密码错误！");
+                        styleUtil.errorShow($("#error_message_p"), "Incorrect username or password!");
                     }
                 },
                 error: function (data) {
-                    $(".loginButton").val("登 录");
-                    styleUtil.errorShow($("#error_message_p"), "服务器异常，请刷新页面再试！");
+                    $(".loginButton").val("Login");
+                    styleUtil.errorShow($("#error_message_p"), "Server error. Please refresh and try again.");
                 },
                 beforeSend: function () {
-                    $(".loginButton").val("正在登录...");
+                    $(".loginButton").val("Logging in...");
                 }
             });
         }

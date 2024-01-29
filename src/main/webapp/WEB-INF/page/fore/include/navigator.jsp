@@ -18,71 +18,71 @@
         <p id="container_login">
             <c:choose>
                 <c:when test="${requestScope.user.user_name==null}">
-                    <em>喵，欢迎来天猫</em>
-                    <a href="${pageContext.request.contextPath}/login">请登录</a>
-                    <a href="${pageContext.request.contextPath}/register">免费注册</a>
+                    <em>Hello, welcome to Tmall</em>
+                    <a href="${pageContext.request.contextPath}/login">Login</a>
+                    <a href="${pageContext.request.contextPath}/register">Register</a>
                 </c:when>
                 <c:otherwise>
                     <em>Hi，</em>
                     <a href="${pageContext.request.contextPath}/userDetails" class="userName"
                        target="_blank">${requestScope.user.user_name}</a>
-                    <a href="${pageContext.request.contextPath}/login/logout">退出</a>
+                    <a href="${pageContext.request.contextPath}/login/logout">Logout</a>
                 </c:otherwise>
             </c:choose>
         </p>
         <ul class="quick_li">
             <li class="quick_li_MyTaobao">
                 <div class="sn_menu">
-                    <a href="${pageContext.request.contextPath}/userDetails">我的淘宝<b></b></a>
+                    <a href="${pageContext.request.contextPath}/userDetails">My Taobao<b></b></a>
                     <div class="quick_menu">
-                        <a href="${pageContext.request.contextPath}/order/0/10">已买到的宝贝</a>
-                        <a href="#">已卖出的宝贝</a>
+                        <a href="${pageContext.request.contextPath}/order/0/10">Items I've Bought</a>
+                        <a href="#">Items I've Sold</a>
                     </div>
                 </div>
             </li>
             <li class="quick_li_cart">
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/buyCar.png">
-                <a href="${pageContext.request.contextPath}/cart">购物车</a>
+                <a href="${pageContext.request.contextPath}/cart">Shopping Cart</a>
             </li>
             <li class="quick_li_menuItem">
                 <div class="sn_menu">
-                    <a href="#">收藏夹<b></b></a>
+                    <a href="#">Favorites<b></b></a>
                     <div class="quick_menu">
-                        <a href="#">收藏的宝贝</a>
-                        <a href="#">收藏的店铺</a>
+                        <a href="#">Favorite Items</a>
+                        <a href="#">Favorite Stores</a>
                     </div>
                 </div>
             </li>
             <li class="quick_li_separator"></li>
             <li class="quick_li_mobile">
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/mobile.png">
-                <a href="#" title="天猫无线">手机版</a>
+                <a href="#" title="Tmall Wireless">Mobile Version</a>
                 <div class="quick_qrcode">
                     <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/qrcode.png">
                     <b></b>
                 </div>
             </li>
-            <li class="quick_home"><a href="${pageContext.request.contextPath}">淘宝网</a></li>
+            <li class="quick_home"><a href="${pageContext.request.contextPath}">TaoBao</a></li>
             <li class="quick_DirectPromo">
                 <div class="sn_menu">
-                    <a href="#">商家支持<b></b></a>
+                    <a href="#">Merchant Support<b></b></a>
                     <div class="quick_DirectPromoDiv">
                         <ul>
                             <li>
-                                <h3>商家：</h3>
-                                <a href="">商家中心</a>
-                                <a href="">天猫规则</a>
-                                <a href="">商家入驻</a>
-                                <a href="">运营服务</a>
-                                <a href="">商家品控</a>
-                                <a href="">商家工具</a>
-                                <a href="">天猫智库</a>
-                                <a href="">喵言喵语</a>
+                                <h3>Merchant:</h3>
+                                <a href="">Merchant Center</a>
+                                <a href="">Tmall Rules</a>
+                                <a href="">Merchant Enrollment</a>
+                                <a href="">Operational Services</a>
+                                <a href="">Merchant Quality Control</a>
+                                <a href="">Merchant Tools</a>
+                                <a href="">Tmall Knowledge Hub</a>
+                                <a href="">Meow Language</a>
                             </li>
                             <li>
-                                <h3>帮助：</h3>
-                                <a href="">帮助中心</a>
-                                <a href="">问商友</a>
+                                <h3>Help:</h3>
+                                <a href="">Help Center</a>
+                                <a href="">Ask Merchant Friends</a>
                             </li>
                         </ul>
                     </div>
@@ -90,65 +90,65 @@
             </li>
             <li class="quick_sitemap">
                 <div class="sn_menu">
-                    <a>网站导航<b></b></a>
+                    <a>Website Navigation<b></b></a>
                     <div class="quick_sitmap_div">
                         <div class="site-hot">
-                            <h2>热点推荐<span>Hot</span></h2>
+                            <h2>Hot Recommendations<span>Hot</span></h2>
                             <ul>
-                                <li><a href="">天猫超市</a></li>
-                                <li><a href="">喵鲜生</a></li>
-                                <li><a href="">科技新品</a></li>
-                                <li><a href="">女装新品</a></li>
-                                <li><a href="">酷玩街</a></li>
-                                <li><a href="">内衣新品</a></li>
-                                <li><a href="">试美妆</a></li>
-                                <li><a href="">运动新品</a></li>
-                                <li><a href="">时尚先生</a></li>
-                                <li><a href="">精明妈咪</a></li>
-                                <li><a href="">吃乐会</a></li>
-                                <li><a href="">企业采购</a></li>
-                                <li><a href="">会员积分</a></li>
-                                <li><a href="">天猫国际</a></li>
-                                <li><a href="">品质频道</a></li>
+                                <li><a href="">Tmall Supermarket</a></li>
+                                <li><a href="">Meow Fresh</a></li>
+                                <li><a href="">New Technology Products</a></li>
+                                <li><a href="">New Women's Fashion</a></li>
+                                <li><a href="">Cool Street</a></li>
+                                <li><a href="">New Women's Shoes</a></li>
+                                <li><a href="">Try Beauty</a></li>
+                                <li><a href="">New Sports Products</a></li>
+                                <li><a href="">Fashion Gentleman</a></li>
+                                <li><a href="">Smart Mommy</a></li>
+                                <li><a href="">Eat and Enjoy</a></li>
+                                <li><a href="">Enterprise Purchases</a></li>
+                                <li><a href="">Member Points</a></li>
+                                <li><a href="">Tmall International</a></li>
+                                <li><a href="">Quality Channel</a></li>
                             </ul>
                         </div>
                         <div class="site-market">
-                            <h2>行业市场<span>Market</span></h2>
+                            <h2>Industry Market<span>Market</span></h2>
                             <ul>
-                                <li><a href="">美妆</a></li>
-                                <li><a href="">电器</a></li>
-                                <li><a href="">女装</a></li>
-                                <li><a href="">男装</a></li>
-                                <li><a href="">女鞋</a></li>
-                                <li><a href="">男鞋</a></li>
-                                <li><a href="">内衣</a></li>
-                                <li><a href="">箱包</a></li>
-                                <li><a href="">运动</a></li>
-                                <li><a href="">母婴</a></li>
-                                <li><a href="">家装</a></li>
-                                <li><a href="">医药</a></li>
-                                <li><a href="">食品</a></li>
-                                <li><a href="">配饰</a></li>
-                                <li><a href="">汽车</a></li>
+                                <li><a href="">Beauty</a></li>
+                                <li><a href="">Appliances</a></li>
+                                <li><a href="">Women's Clothing</a></li>
+                                <li><a href="">Men's Clothing</a></li>
+                                <li><a href="">Women's Shoes</a></li>
+                                <li><a href="">Men's Shoes</a></li>
+                                <li><a href="">Underwear</a></li>
+                                <li><a href="">Bags</a></li>
+                                <li><a href="">Sports</a></li>
+                                <li><a href="">Mother and Baby</a></li>
+                                <li><a href="">Home Decoration</a></li>
+                                <li><a href="">Medicine</a></li>
+                                <li><a href="">Food</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Automobiles</a></li>
                             </ul>
                         </div>
                         <div class="site-brand">
-                            <h2>品牌风尚<span>Brand</span></h2>
+                            <h2>Brand Fashion<span>Brand</span></h2>
                             <ul>
-                                <li><a href="">尚天猫</a></li>
-                                <li><a href="">大牌街</a></li>
-                                <li><a href="">潮牌街</a></li>
-                                <li><a href="">天猫原创</a></li>
-                                <li><a href="">什么牌子好</a></li>
+                                <li><a href="">Tmall Fashion</a></li>
+                                <li><a href="">Big Brand Street</a></li>
+                                <li><a href="">Fashion Street</a></li>
+                                <li><a href="">Tmall Original</a></li>
+                                <li><a href="">What Brand is Good</a></li>
                             </ul>
                         </div>
                         <div class="site-help">
-                            <h2>服务指南<span>Help</span></h2>
+                            <h2>Service Guide<span>Help</span></h2>
                             <ul>
-                                <li><a href="">帮助中心</a></li>
-                                <li><a href="">品质保障</a></li>
-                                <li><a href="">特色服务</a></li>
-                                <li><a href="">7天退换货</a></li>
+                                <li><a href="">Help Center</a></li>
+                                <li><a href="">Quality Guarantee</a></li>
+                                <li><a href="">Special Services</a></li>
+                                <li><a href="">7-Day Return Policy</a></li>
                             </ul>
                         </div>
                     </div>

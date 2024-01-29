@@ -2,7 +2,7 @@
 <%@ include file="include/header.jsp" %>
 <head>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_orderPaySuccess.css" rel="stylesheet"/>
-    <title>天猫tmall.com - 网上支付</title>
+    <title>Tmall - Online Payment</title>
 </head>
 <body>
 <nav>
@@ -15,9 +15,9 @@
         <div class="shopSearchHeader">
             <form action="${pageContext.request.contextPath}/product" method="get">
                 <div class="shopSearchInput">
-                    <input type="text" class="searchInput" name="product_name" placeholder="搜索 天猫 商品/品牌/店铺"
+                    <input type="text" class="searchInput" name="product_name" placeholder="Search Tmall Products/Brands/Stores"
                            value="${requestScope.searchValue}" maxlength="50">
-                    <input type="submit" value="搜 索" class="searchBtn">
+                    <input type="submit" value="Search" class="searchBtn">
                 </div>
             </form>
             <ul>
@@ -33,28 +33,28 @@
 <div class="content">
     <div class="content_main">
         <div id="J_AmountList">
-            <h2>您已成功付款</h2>
+            <h2>You have successfully made the payment</h2>
             <div class="summary_pay_done">
                 <ul>
                     <li>
-                        收货地址：<span>${requestScope.productOrder.productOrder_detail_address} ${requestScope.productOrder.productOrder_receiver} ${requestScope.productOrder.productOrder_mobile}</span>
+                        Shipping Address: <span>${requestScope.productOrder.productOrder_detail_address} ${requestScope.productOrder.productOrder_receiver} ${requestScope.productOrder.productOrder_mobile}</span>
                     </li>
-                    <li>实付款：<span><em>￥${requestScope.orderTotalPrice}</em></span></li>
+                    <li>Total Payment: <span><em>￥${requestScope.orderTotalPrice}</em></span></li>
                 </ul>
             </div>
         </div>
         <div id="J_ButtonList">
-            <span class="info">您可以 </span>
-            <a class="J_MakePoint" href="${pageContext.request.contextPath}/order/0/10">查看已买到的宝贝</a>
+            <span class="info">You can </span>
+            <a class="J_MakePoint" href="${pageContext.request.contextPath}/order/0/10">view purchased items</a>
         </div>
         <div id="J_RemindList">
             <ul>
                 <li class="alertLi">
                     <p>
-                        <strong>安全提醒：</strong>
-                        <span class="info">下单后，</span>
-                        <span class="warn">用QQ给您发送链接办理退款的都是骗子</span>
-                        <span class="info">！天猫不存在系统升级，订单异常等问题，谨防假冒客服电话诈骗！</span>
+                        <strong>Safety Reminder:</strong>
+                        <span class="info">After placing an order, </span>
+                        <span class="warn">any links sent to you via QQ for refund processing are scams.</span>
+                        <span class="info"> Tmall does not have system upgrades, order issues, etc. Be cautious of fraudulent customer service calls!</span>
                     </p>
                 </li>
             </ul>

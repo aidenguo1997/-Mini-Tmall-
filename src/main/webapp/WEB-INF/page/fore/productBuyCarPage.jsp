@@ -3,7 +3,7 @@
 <head>
     <script src="${pageContext.request.contextPath}/res/js/fore/fore_productBuyCar.js"></script>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_productBuyCarPage.css" rel="stylesheet"/>
-    <title>Tmall.com天猫 - 购物车</title>
+    <title>Tmall.com - Shopping Cart</title>
     <script>
         $(function () {
             $('#btn-ok').click(function () {
@@ -14,7 +14,7 @@
                     dataType: "json",
                     success: function (data) {
                         if (data.success !== true) {
-                            alert("购物车商品删除异常，请稍候再试！");
+                            alert("Exception occurred while removing items from the shopping cart. Please try again later!");
                         }
                         location.href = "/tmall/cart";
                     },
@@ -22,7 +22,7 @@
 
                     },
                     error: function () {
-                        alert("购物车产品删除异常，请稍后再试！");
+                        alert("Exception occurred while removing products from the shopping cart. Please try again later!");
                         location.href = "/tmall/cart";
                     }
                 });
@@ -45,14 +45,14 @@
         <div id="mallLogo">
             <a href="${pageContext.request.contextPath}"><img
                     src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/tmallLogoA.png"><span
-                    class="span_tmallBuyCar">购物车</span></a>
+                    class="span_tmallBuyCar">Shopping Cart</span></a>
         </div>
         <div class="shopSearchHeader">
             <form action="${pageContext.request.contextPath}/product" method="get">
                 <div class="shopSearchInput">
-                    <input type="text" class="searchInput" name="product_name" placeholder="搜索 天猫 商品/品牌/店铺"
+                    <input type="text" class="searchInput" name="product_name" placeholder="Search Tmall Products/Brands/Shops"
                            value="${requestScope.searchValue}" maxlength="50">
-                    <input type="submit" value="搜 索" class="searchBtn">
+                    <input type="submit" value="Search" class="searchBtn">
                 </div>
             </form>
             <ul>
@@ -69,13 +69,13 @@
     <c:choose>
         <c:when test="${fn:length(requestScope.orderItemList)<=0}">
             <div id="crumbs">
-                <span class="cart-tip">购物车帮您一次性完成批量购买与付款，下单更便捷，付款更简单！<a
-                        href="http://service.taobao.com/support/help-11746.htm?spm=a1z0d.1.0.0.ogEwpx" target="_blank">如何使用购物车</a></span>
+                <span class="cart-tip">The shopping cart helps you complete batch purchases and payments at once, making ordering more convenient and payment simpler! <a
+                        href="http://service.taobao.com/support/help-11746.htm?spm=a1z0d.1.0.0.ogEwpx" target="_blank">How to use the shopping cart</a></span>
             </div>
             <div id="empty">
-                <h2>您的购物车还是空的，赶紧行动吧！您可以：</h2>
+                <h2>Your shopping cart is still empty, take action now! You can:</h2>
                 <ul>
-                    <li>看看<a href="${pageContext.request.contextPath}/order">已买到的宝贝</a></li>
+                    <li>看看<a href="${pageContext.request.contextPath}/order">Items You've Purchased</a></li>
                 </ul>
             </div>
         </c:when>
@@ -84,16 +84,16 @@
                 <ul id="J_CartSwitch">
                     <li>
                         <a href="${pageContext.request.contextPath}/cart" class="J_MakePoint">
-                            <em>全部商品</em>
+                            <em>All Products</em>
                             <span class="number">${requestScope.orderItemTotal}</span>
                         </a>
                     </li>
                 </ul>
                 <div class="cart-sum">
-                    <span class="pay-text">已选商品（不含运费）</span>
+                    <span class="pay-text">Selected items (excluding shipping costs)</span>
                     <strong class="price"><em id="J_SmallTotal"><span
                             class="total-symbol">&nbsp;</span>0.00</em></strong>
-                    <a id="J_SmallSubmit" class="submit-btn submit-btn-disabled">结&nbsp;算</a>
+                    <a id="J_SmallSubmit" class="submit-btn submit-btn-disabled">Checkout</a>
                 </div>
                 <div class="wrap-line">
                     <div class="floater"></div>
@@ -103,12 +103,12 @@
                 <thead>
                 <tr>
                     <th class="selectAll_th"><input type="checkbox" class="cbx_select" id="cbx_select_all"><label
-                            for="cbx_select_all">全选</label></th>
-                    <th width="474px" class="productInfo_th"><span>商品信息</span></th>
-                    <th width="120px"><span>单价</span></th>
-                    <th width="120px"><span>数量</span></th>
-                    <th width="120px"><span>金额</span></th>
-                    <th width="84px"><span>操作</span></th>
+                            for="cbx_select_all">Select All</label></th>
+                    <th width="474px" class="productInfo_th"><span>Product Information</span></th>
+                    <th width="120px"><span>Unit Price</span></th>
+                    <th width="120px"><span>Quantity</span></th>
+                    <th width="120px"><span>Amount</span></th>
+                    <th width="84px"><span>Operation</span></th>
                     <th hidden>ID</th>
                 </tr>
                 </thead>
@@ -116,7 +116,7 @@
                 <c:forEach items="${requestScope.orderItemList}" var="orderItem">
                     <tr class="orderItem_category">
                         <td colspan="6"><span class="shop_logo"></span><span
-                                class="category_shop">店铺：贤趣${orderItem.productOrderItem_product.product_category.category_name}旗舰店</span>
+                                class="category_shop">Shop: 贤趣${orderItem.productOrderItem_product.product_category.category_name}旗舰店</span>
                         </td>
                     </tr>
                     <tr class="orderItem_info">
@@ -144,7 +144,7 @@
                             <span class="orderItem_product_realPrice">￥${orderItem.productOrderItem_price}</span>
                         </td>
                         <td><a href="javascript:void(0)" onclick="removeItem('${orderItem.productOrderItem_id}')"
-                               class="remove_order">删除</a></td>
+                               class="remove_order">Remove</a></td>
                         <td>
                             <input type="hidden" class="input_orderItem" name="${orderItem.productOrderItem_id}"/>
                         </td>
@@ -156,21 +156,21 @@
                 <div id="J_SelectAll2">
                     <div class="cart_checkbox">
                         <input class="J_checkboxShop" id="J_SelectAllCbx2" type="checkbox" value="true"/>
-                        <label for="J_SelectAllCbx2" title="勾选购物车内所有商品"></label>
+                        <label for="J_SelectAllCbx2" title="Select all items in the shopping cart"></label>
                     </div>
-                    <span class="span_selectAll">&nbsp;全选</span>
+                    <span class="span_selectAll">&nbsp;Select All</span>
                 </div>
                 <div class="operations">
-                    <a href="javascript:void(0)" onclick="remove()">删除</a>
+                    <a href="javascript:void(0)" onclick="remove()">Remove</a>
                 </div>
                 <div class="float-bar-right">
                     <div id="J_ShowSelectedItems">
-                        <span class="txt">已选商品</span>
+                        <span class="txt">Selected Items</span>
                         <em id="J_SelectedItemsCount">0</em>
-                        <span class="txt">件</span>
+                        <span class="txt">pieces</span>
                     </div>
                     <div class="price_sum">
-                        <span class="txt">合计（不含运费）:</span>
+                        <span class="txt">Total (excluding shipping costs):</span>
                         <strong class="price">
                             <em id="J_Total">
                                 <span class="total_symbol">&nbsp;  ￥</span>
@@ -180,7 +180,7 @@
                     </div>
                     <div class="btn_area">
                         <a href="javascript:void(0)" id="J_Go" onclick="create(this)">
-                            <span>结&nbsp;算</span>
+                            <span>Checkout</span>
                         </a>
                     </div>
                 </div>
@@ -194,12 +194,12 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">提示</h4>
+                <h4 class="modal-title" id="myModalLabel">Prompt</h4>
             </div>
-            <div class="modal-body">您确定要取消该宝贝吗？</div>
+            <div class="modal-body">Are you sure you want to remove this item?</div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary" id="btn-ok">确定</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-close">关闭</button>
+                <button type="submit" class="btn btn-primary" id="btn-ok">OK</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-close">Close</button>
                 <input type="hidden" id="order_id_hidden">
             </div>
         </div>

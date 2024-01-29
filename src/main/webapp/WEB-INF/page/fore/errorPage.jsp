@@ -4,6 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-<p>出现异常！</p>
+<p>An exception occurred!</p>
 </body>
 </html>

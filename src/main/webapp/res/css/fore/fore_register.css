@@ -33,7 +33,7 @@ nav {
 }
 
 #mallLogo .span_tmallRegister {
-    font-family: "Microsoft YaHei UI Light", serif;
+    font-family: "Arial", serif;
     display: inline-block;
     height: 28px;
     line-height: 28px;
@@ -177,8 +177,8 @@ nav {
     margin-left: 110px;
     margin-top: 20px;
 }
-
 .msg {
+    display: none;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -199,3 +199,4 @@ nav {
     -ms-user-select: none;
     user-select: none;
 }
+

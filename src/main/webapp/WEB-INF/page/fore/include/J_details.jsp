@@ -20,13 +20,13 @@
         line-height: 40px;
         color: #666;
         margin: 0;
-        font-family: "Microsoft YaHei UI", serif;
+        font-family: "Arial", sans-serif;
         font-size: 10px;
     }
 
     .J_details_list_header > span {
         color: #333333;
-        font-family: "Microsoft YaHei UI", serif;
+        font-family: "Arial", sans-serif;
     }
 
     .J_details_list > .J_details_list_title {
@@ -35,7 +35,7 @@
         line-height: 22px;
         color: #999;
         font-weight: 700;
-        font-family: "Microsoft YaHei UI", serif;
+        font-family: "Arial", sans-serif;
         font-size: 10px;
     }
 
@@ -58,7 +58,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         color: #666;
-        font-family: "Microsoft YaHei UI", serif;
+        font-family: "Arial", sans-serif;
         font-size: 10px;
     }
 
@@ -71,8 +71,8 @@
 </style>
 <div class="J_details">
     <div class="J_details_list">
-        <p class="J_details_list_header">产品名称：<span>${requestScope.product.product_name}</span></p>
-        <p class="J_details_list_title">产品参数：</p>
+        <p class="J_details_list_header">Product Name：<span>${requestScope.product.product_name}</span></p>
+        <p class="J_details_list_title">Product Parameters：</p>
         <ul class="J_details_list_body">
             <c:forEach items="${requestScope.propertyList}" var="property">
                 <c:if test="${property.propertyValueList[0].propertyValue_value != null}">

@@ -19,7 +19,7 @@
         #nav {
             width: auto;
             height: 32px;
-            font-family: "Microsoft YaHei UI", Tahoma, serif;
+            font-family: "Arial", Tahoma, sans-serif;
             font-size: 12px;
             position: relative !important;
             background: #f2f2f2;
@@ -27,7 +27,7 @@
             border-bottom: 1px solid #e5e5e5;
         }
     </style>
-    <title>天猫-登录</title>
+    <title>Tmall - Login</title>
 </head>
 <body>
 <nav id="baseNavigator">
@@ -42,37 +42,37 @@
         <div class="loginMessage">
             <div class="loginMessageMain">
                 <div class="poptip-arrow"><em></em><span></span></div>
-                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/scan-safe.png"/><span>扫码登录更安全</span>
+                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/scan-safe.png"/><span>Scan for login</span>
             </div>
         </div>
         <div class="pwdLogin">
-            <span class="loginTitle">密码登录</span>
+            <span class="loginTitle">Password Login</span>
             <form method="post" class="loginForm">
                 <div class="loginInputDiv">
                     <label for="name" class="loginLabel"><img
                             src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/2018-04-27_235518.png"
-                            width="38px" height="39px" title="会员名"/></label>
-                    <input type="text" name="name" id="name" class="loginInput" placeholder="会员名/邮箱/手机号">
+                            width="38px" height="39px" title="Username"/></label>
+                    <input type="text" name="name" id="name" class="loginInput" placeholder="Username/Email/Mobile Number">
                 </div>
                 <div class="loginInputDiv">
                     <label for="password" class="loginLabel"><img
                             src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/2018-04-27_235533.png"
-                            width="38px" height="39px" title="登录密码"/></label>
+                            width="38px" height="39px" title="Login Password"/></label>
                     <input type="password" name="password" id="password" class="loginInput">
                 </div>
-                <input type="submit" class="loginButton" value="登 录">
+                <input type="submit" class="loginButton" value="Login">
             </form>
             <div class="loginLinks">
-                <a href="#">忘记密码</a>
-                <a href="#">忘记会员名</a>
-                <a href="${pageContext.request.contextPath}/register">免费注册</a>
+                <a href="#">Forgot Password</a>
+                <a href="#">Forgot Username</a>
+                <a href="${pageContext.request.contextPath}/register">Register</a>
             </div>
             <div class="error_message">
                 <p id="error_message_p"></p>
             </div>
         </div>
         <div class="qrcodeLogin">
-            <span class="loginTitle">手机扫码，安全登录</span>
+            <span class="loginTitle">Mobile Scan, Secure Login</span>
             <div class="qrcodeMain">
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/login_qrcode.png"
                      id="qrcodeA"/>
@@ -81,12 +81,12 @@
             </div>
             <div class="qrcodeFooter">
                 <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/scan_icon2.png">
-                <p>打开 <a href="https://www.tmall.com/wow/portal/act/app-download">手机天猫</a> | <a
-                        href="https://www.taobao.com/m">手机淘宝</a>扫一扫登录</p>
+                <p>Open <a href="https://www.tmall.com/wow/portal/act/app-download">Mobile Tmall</a> | <a
+                        href="https://www.taobao.com/m">Mobile Taobao</a> scan to login</p>
             </div>
             <div class="loginLinks">
-                <a href="JavaScript:void(0)" id="pwdLogin">密码登录</a>
-                <a href="#">免费注册</a>
+                <a href="JavaScript:void(0)" id="pwdLogin">Password Login</a>
+                <a href="#">Register</a>
             </div>
         </div>
     </div>

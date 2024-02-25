@@ -11,6 +11,6 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("https://tmall.up.railway.app/tmall/").allowCredentials(true).allowedMethods(ORIGINS).maxAge(3600);
+        registry.addMapping("/**").allowedOriginPatterns("*").allowedMethods("*").maxAge(3600).allowCredentials(true);
     }
-}
+}   

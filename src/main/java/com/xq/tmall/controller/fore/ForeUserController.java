@@ -6,6 +6,7 @@ import com.xq.tmall.entity.Address;
 import com.xq.tmall.entity.User;
 import com.xq.tmall.service.AddressService;
 import com.xq.tmall.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -96,6 +97,7 @@ public class ForeUserController extends BaseController{
         return jsonObject.toJSONString();
     }
     //前台天猫-用户详情更新
+    @Operation(summary = "User Update",description = "需要登录后访问")
     @RequestMapping(value="user/update",method=RequestMethod.POST,produces ="application/json;charset=utf-8")
     public String userUpdate(HttpSession session, Map<String,Object> map,
                              @RequestParam(value = "user_nickname") String user_nickname  /*用户昵称 */,

@@ -13,25 +13,10 @@ public class SwaggerConfig {
 
     @Bean
     public OpenAPI openAPI() {
-        Info info = new Info()
-                .title("Tmall Store")
-                .version("Ver. 1.0.2")
-                .description("天貓商城API").termsOfService("https://github.com/aidenguo1997/-Mini-Tmall-");
-        String securitySchemeName = "JWT Authentication";
-        SecurityRequirement securityRequirement =
-                new SecurityRequirement().addList(securitySchemeName);
-        Components components = new Components()
-                .addSecuritySchemes(securitySchemeName,
-                        new SecurityScheme()
-                                .name(securitySchemeName)
-                                .type(SecurityScheme.Type.HTTP)
-                                .scheme("bearer")
-                                .bearerFormat("JWT")
-                );
-
         return new OpenAPI()
-                .info(info)
-                .addSecurityItem(securityRequirement)
-                .components(components);
+                .info(new Info().title("Tmall Store")
+                .version("Ver. 1.0.2")
+                .description("天貓商城API").termsOfService("https://github.com/aidenguo1997/-Mini-Tmall-"));
+
     }
 }

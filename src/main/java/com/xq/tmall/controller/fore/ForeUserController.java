@@ -6,6 +6,7 @@ import com.xq.tmall.entity.Address;
 import com.xq.tmall.entity.User;
 import com.xq.tmall.service.AddressService;
 import com.xq.tmall.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,6 +29,7 @@ import java.util.UUID;
  * 用户信息管理
  * @author 贤趣项目小组
  */
+@Tag(name = "User", description = "The user API")
 @Controller
 public class ForeUserController extends BaseController{
     @Resource(name = "addressService")
